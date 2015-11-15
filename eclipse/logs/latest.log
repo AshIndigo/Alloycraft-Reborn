@@ -1,0 +1,65 @@
+[19:28:50] [main/INFO]: Setting user: Player372
+[19:28:54] [Client thread/INFO]: LWJGL Version: 2.9.1
+[19:29:07] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Not Enough Items, FMLFileResourcePack:The Rust Mod, FMLFileResourcePack:Alloycraft, FMLFileResourcePack:GlueMod, FMLFileResourcePack:IndigoUtils, FMLFileResourcePack:CoFH Core, FMLFileResourcePack:Not Enough Resources, FMLFileResourcePack:Thermal Dynamics, FMLFileResourcePack:Thermal Expansion, FMLFileResourcePack:Thermal Foundation
+[19:29:10] [Sound Library Loader/INFO]: Sound engine started
+[19:29:12] [Client thread/INFO]: Created: 16x16 textures/blocks-atlas
+[19:29:12] [Client thread/INFO]: Created: 16x16 textures/items-atlas
+[19:29:15] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Not Enough Items, FMLFileResourcePack:The Rust Mod, FMLFileResourcePack:Alloycraft, FMLFileResourcePack:GlueMod, FMLFileResourcePack:IndigoUtils, FMLFileResourcePack:CoFH Core, FMLFileResourcePack:Not Enough Resources, FMLFileResourcePack:Thermal Dynamics, FMLFileResourcePack:Thermal Expansion, FMLFileResourcePack:Thermal Foundation
+[19:29:17] [Client thread/INFO]: Created: 512x512 textures/blocks-atlas
+[19:29:17] [Client thread/INFO]: Created: 512x512 textures/items-atlas
+[19:29:18] [Sound Library Loader/INFO]: Sound engine started
+[19:29:23] [Server thread/INFO]: Starting integrated minecraft server version 1.7.10
+[19:29:23] [Server thread/INFO]: Generating keypair
+[19:29:24] [Server thread/INFO]: Preparing start region for level 0
+[19:29:24] [Server thread/WARN]: Skipping BlockEntity with id forgetileentity
+[19:29:25] [Server thread/INFO]: Changing view distance to 12, from 10
+[19:29:26] [Server thread/INFO]: Player372[local:E:7743bc97] logged in with entity id 148 at (229.94288063414675, 4.0, -206.6682616438245)
+[19:29:26] [Server thread/INFO]: Player372 joined the game
+[19:29:28] [Server thread/WARN]: Can't keep up! Did the system time change, or is the server overloaded? Running 2452ms behind, skipping 49 tick(s)
+[19:29:38] [Server thread/INFO]: Player372 has just earned the achievement [Taking Inventory]
+[19:29:39] [Client thread/INFO]: [CHAT] Player372 has just earned the achievement [Taking Inventory]
+[19:29:39] [Client thread/WARN]: Failed to load texture: null:textures/gui/null.png
+java.io.FileNotFoundException: null:textures/gui/null.png
+	at net.minecraft.client.resources.SimpleReloadableResourceManager.getResource(SimpleReloadableResourceManager.java:71) ~[SimpleReloadableResourceManager.class:?]
+	at net.minecraft.client.renderer.texture.SimpleTexture.loadTexture(SimpleTexture.java:35) ~[SimpleTexture.class:?]
+	at net.minecraft.client.renderer.texture.TextureManager.loadTexture(TextureManager.java:89) [TextureManager.class:?]
+	at net.minecraft.client.renderer.texture.TextureManager.bindTexture(TextureManager.java:45) [TextureManager.class:?]
+	at com.ashindigo.utils.UtilsGui.drawGuiContainerBackgroundLayer(UtilsGui.java:48) [UtilsGui.class:?]
+	at net.minecraft.client.gui.inventory.GuiContainer.drawScreen(GuiContainer.java:93) [GuiContainer.class:?]
+	at net.minecraft.client.renderer.EntityRenderer.updateCameraAndRender(EntityRenderer.java:1137) [EntityRenderer.class:?]
+	at net.minecraft.client.Minecraft.runGameLoop(Minecraft.java:1067) [Minecraft.class:?]
+	at net.minecraft.client.Minecraft.run(Minecraft.java:962) [Minecraft.class:?]
+	at net.minecraft.client.main.Main.main(Main.java:164) [Main.class:?]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_60]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_60]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_60]
+	at java.lang.reflect.Method.invoke(Method.java:497) ~[?:1.8.0_60]
+	at net.minecraft.launchwrapper.Launch.launch(Launch.java:135) [launchwrapper-1.12.jar:?]
+	at net.minecraft.launchwrapper.Launch.main(Launch.java:28) [launchwrapper-1.12.jar:?]
+	at net.minecraftforge.gradle.GradleStartCommon.launch(Unknown Source) [start/:?]
+	at GradleStart.main(Unknown Source) [start/:?]
+[19:29:42] [Server thread/ERROR]: Encountered an unexpected exception
+net.minecraft.util.ReportedException: Ticking memory connection
+	at net.minecraft.network.NetworkSystem.networkTick(NetworkSystem.java:198) ~[NetworkSystem.class:?]
+	at net.minecraft.server.MinecraftServer.updateTimeLightAndEntities(MinecraftServer.java:726) ~[MinecraftServer.class:?]
+	at net.minecraft.server.MinecraftServer.tick(MinecraftServer.java:614) ~[MinecraftServer.class:?]
+	at net.minecraft.server.integrated.IntegratedServer.tick(IntegratedServer.java:118) ~[IntegratedServer.class:?]
+	at net.minecraft.server.MinecraftServer.run(MinecraftServer.java:485) [MinecraftServer.class:?]
+	at net.minecraft.server.MinecraftServer$2.run(MinecraftServer.java:752) [MinecraftServer$2.class:?]
+Caused by: java.lang.IndexOutOfBoundsException: Index: 36, Size: 36
+	at java.util.ArrayList.rangeCheck(ArrayList.java:653) ~[?:1.8.0_60]
+	at java.util.ArrayList.get(ArrayList.java:429) ~[?:1.8.0_60]
+	at net.minecraft.inventory.Container.slotClick(Container.java:300) ~[Container.class:?]
+	at net.minecraft.network.NetHandlerPlayServer.processClickWindow(NetHandlerPlayServer.java:955) ~[NetHandlerPlayServer.class:?]
+	at net.minecraft.network.play.client.C0EPacketClickWindow.processPacket(C0EPacketClickWindow.java:41) ~[C0EPacketClickWindow.class:?]
+	at net.minecraft.network.play.client.C0EPacketClickWindow.processPacket(C0EPacketClickWindow.java:113) ~[C0EPacketClickWindow.class:?]
+	at net.minecraft.network.NetworkManager.processReceivedPackets(NetworkManager.java:241) ~[NetworkManager.class:?]
+	at net.minecraft.network.NetworkSystem.networkTick(NetworkSystem.java:182) ~[NetworkSystem.class:?]
+	... 5 more
+[19:29:42] [Server thread/ERROR]: This crash report has been saved to: /Users/19jasonides_a/Documents/Programming/forge-1.7.10-10.13.4.1492-1.7.10-src/eclipse/./crash-reports/crash-2015-11-15_19.29.42-server.txt
+[19:29:42] [Server thread/INFO]: Stopping server
+[19:29:42] [Server thread/INFO]: Saving players
+[19:29:42] [Server thread/INFO]: Saving worlds
+[19:29:42] [Server thread/INFO]: Saving chunks for level 'New World'/Overworld
+[19:29:42] [Server thread/INFO]: Saving chunks for level 'New World'/Nether
+[19:29:42] [Server thread/INFO]: Saving chunks for level 'New World'/The End

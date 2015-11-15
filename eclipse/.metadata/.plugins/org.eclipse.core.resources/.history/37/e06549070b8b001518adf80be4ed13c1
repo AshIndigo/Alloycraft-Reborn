@@ -1,0 +1,7 @@
+package com.ashindigo.alloycraft.tileentites;
+
+import net.minecraft.tileentity.TileEntity;
+
+public class ForgeTileEntity extends TileEntity {
+
+}

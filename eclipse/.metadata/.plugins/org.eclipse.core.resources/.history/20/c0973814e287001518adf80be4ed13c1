@@ -1,0 +1,38 @@
+package com.ashindigo.alloycraft;
+
+import com.ashindigo.utils.UtilsBlock;
+import com.ashindigo.utils.UtilsBlockOre;
+import com.ashindigo.utils.UtilsItem;
+import com.ashindigo.utils.UtilsItemBlockLoader;
+
+import cpw.mods.fml.common.registry.GameRegistry;
+import net.minecraft.block.material.Material;
+
+public class AlloycraftBlocks extends UtilsItemBlockLoader {
+	
+	public static UtilsBlock test;
+	public static UtilsBlock test2;
+	static UtilsBlock block = new UtilsBlock(Material.rock);
+	static UtilsBlockOre blockore = new UtilsBlockOre(Material.rock);
+	public static UtilsBlockOre testore;
+	public static UtilsBlockOre testore2;
+	
+	public static void preInitBlocks() {
+		
+		test = new UtilsBlock(Material.rock, AlloycraftMain.modid, "test");
+		test2 = new UtilsBlock(Material.rock, AlloycraftMain.modid, "testpo");
+		//block.blocklists.add(test);
+		//block.blocklists.add(test2);
+		testore = new UtilsBlockOre(Material.rock, AlloycraftItems.test, test);
+		testore2 = new UtilsBlockOre(Material.rock, AlloycraftItems.axetest, test2);
+	}
+
+	public static void initBlocks() {
+		
+	}
+	
+	public static void postInitBlocks() {
+		
+	}
+
+}

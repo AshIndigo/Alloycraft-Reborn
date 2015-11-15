@@ -1,0 +1,67 @@
+package com.ashindigo.alloycraft.blocks;
+
+import com.ashindigo.alloycraft.AlloycraftMain;
+import com.ashindigo.alloycraft.tileentites.ForgeTileEntity;
+import com.ashindigo.utils.UtilsBlock;
+import com.ashindigo.utils.UtilsBlockContainer;
+
+import cpw.mods.fml.common.network.internal.FMLNetworkHandler;
+import net.minecraft.block.material.Material;
+import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.tileentity.TileEntity;
+import net.minecraft.world.World;
+
+public class ForgeBlock extends UtilsBlockContainer {
+
+	public ForgeBlock(Material mat, String modid, String name, TileEntity tilentity) {
+		super(mat, modid, name, tilentity);
+		setBlockName(modid + "_" + name);
+		setCreativeTab(CreativeTabs.tabBlock);
+		setBlockTextureName(modid + ":" + name);
+		this.tileEntity = tilentity;
+	}
+	
+	public boolean onBlockActivated(World world, int x, int y, int z, EntityPlayer player, int side, float hitX, float hitY, float hitZ) {
+    	if (world.isRemote) {
+    		return true;
+    	}else if (!player.isSneaking()) {
+    		ForgeTileEntity entity = (ForgeTileEntity) world.getTileEntity(x, y, z);
+    		if (entity != null) {
+    			FMLNetworkHandler.openGui(player, AlloycraftMain.instance, AlloycraftMain.guiIDForge, world, x, y, z);
+    		}
+    		return true;
+    	}else{
+    		return false;
+    	}
+    }
+	
+
+	public static void updateBlockState(boolean issmelting, World world, int xCoord, int yCoord, int zCoord) {
+		
+		int i = world.getBlockMetadata(xCoord, yCoord, zCoord);
+		TileEntity entity = world.getTileEntity(xCoord, yCoord, zCoord);
+		keepInventory = true;
+		
+		if (issmelting) {
+			world.setBlock(xCoord, yCoord, zCoord, AlloycraftBlocks.alloysmelteridle);
+		}else{
+			world.setBlock(xCoord, yCoord, zCoord, AlloycraftBlocks.alloysmelteractive);
+		}
+		
+		keepInventory = false;
+		world.setBlockMetadataWithNotify(xCoord, yCoord, zCoord, i, 2);
+		
+		if (entity != null) {
+			entity.validate();
+			world.setTileEntity(xCoord, yCoord, zCoord, entity);
+		}
+	}
+	
+	@Override
+	public TileEntity createNewTileEntity(World p_149915_1_, int p_149915_2_) {
+		// TODO Auto-generated method stub
+		return new ForgeTileEntity(4, "Cool Thing");
+	}
+
+}

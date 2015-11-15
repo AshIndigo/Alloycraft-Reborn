@@ -1,0 +1,7 @@
+package com.ashindigo.alloycraft.lib;
+
+import com.ashindigo.utils.UtilsGui;
+
+public class ForgeGui extends UtilsGui {
+
+}

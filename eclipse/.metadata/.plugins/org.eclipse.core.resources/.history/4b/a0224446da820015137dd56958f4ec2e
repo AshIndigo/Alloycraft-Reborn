@@ -1,0 +1,53 @@
+package com.ashindigo.lejostest;
+
+import lejos.hardware.BrickFinder;
+import lejos.hardware.motor.EV3LargeRegulatedMotor;
+import lejos.hardware.motor.Motor;
+import lejos.hardware.port.AnalogPort;
+import lejos.hardware.port.MotorPort;
+import lejos.hardware.port.Port;
+import lejos.hardware.sensor.EV3SensorConstants;
+import lejos.hardware.sensor.EV3TouchSensor;
+import lejos.hardware.sensor.NXTTouchSensor;
+import lejos.hardware.sensor.SensorMode;
+import lejos.remote.ev3.RemoteEV3;
+import lejos.robotics.RegulatedMotor;
+import lejos.robotics.SampleProvider;
+import lejos.robotics.filter.AbstractFilter;
+
+public class Main {
+	
+	EV3TouchSensor touchsensor = new EV3TouchSensor(BrickFinder.getDefault().getPort("1"));
+	public SampleProvider touch = touchsensor.getMode("Touch");
+	public float[] sample = new float[touch.sampleSize()];
+	public touch.fetchSample(sample, 0);
+	
+	@SuppressWarnings("resource")
+	public static void main(String[] args) {
+		Motor.A.rotate(55);
+		BrickFinder.getDefault().getPort("1");
+		SimpleTouch simpletouch = new SimpleTouch(Main.touch);
+		if(simpletouch.isPressed() == true){
+			
+		}
+		//NXTTouchSensor touch = new NXTTouchSensor(BrickFinder.getDefault().getPort("1"));
+	}
+	public class SimpleTouch extends AbstractFilter {
+	  private float[] sample;
+
+	  public SimpleTouch(SampleProvider source) {
+	    super(source);
+	    sample = new float[sampleSize];
+	  }
+
+	  public boolean isPressed() {
+	    super.fetchSample(sample, 0);
+	    if (sample[0] == 0)
+	      return false;
+	    return true;
+	  }
+
+	}
+
+
+}

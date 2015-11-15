@@ -1,0 +1,29 @@
+package com.ashindigo.alloycraft;
+
+import com.ashindigo.alloycraft.blocks.ForgeBlock;
+import com.ashindigo.utils.UtilsBlock;
+import com.ashindigo.utils.UtilsBlockOre;
+import com.ashindigo.utils.UtilsItem;
+import com.ashindigo.utils.UtilsItemBlockLoader;
+
+import cpw.mods.fml.common.registry.GameRegistry;
+import net.minecraft.block.material.Material;
+
+public class AlloycraftBlocks extends UtilsItemBlockLoader {
+	
+	public static UtilsBlockContainer forge;
+
+	public static void preInitBlocks() {
+		
+		forge = new ForgeBlock(Material.rock, AlloycraftMain.modid, "forgeblock");
+	}
+
+	public static void initBlocks() {
+		
+	}
+	
+	public static void postInitBlocks() {
+		
+	}
+
+}

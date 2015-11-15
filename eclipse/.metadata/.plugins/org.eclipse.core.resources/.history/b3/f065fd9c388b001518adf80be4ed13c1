@@ -1,0 +1,17 @@
+package com.ashindigo.alloycraft.tileentites;
+
+import com.ashindigo.utils.UtilsTileEntity;
+
+import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.inventory.ISidedInventory;
+import net.minecraft.item.ItemStack;
+import net.minecraft.tileentity.TileEntity;
+
+public class ForgeTileEntity extends UtilsTileEntity {
+
+	public ForgeTileEntity(int slots, String invname) {
+		super(slots, invname);
+		// TODO Auto-generated constructor stub
+	}
+	
+}

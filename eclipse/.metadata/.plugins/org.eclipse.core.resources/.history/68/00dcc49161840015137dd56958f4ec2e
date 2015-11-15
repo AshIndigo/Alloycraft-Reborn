@@ -1,0 +1,14 @@
+package com.ashindigo.utils;
+
+public abstract class UtilsItemsLoader {
+	
+	public static void preInitItems() {
+	}
+		
+	public static void initItems() {
+	}
+	
+	public static void postInitItems() {
+	}
+
+}

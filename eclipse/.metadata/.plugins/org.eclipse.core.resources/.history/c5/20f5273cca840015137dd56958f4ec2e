@@ -1,0 +1,36 @@
+package com.ashindigo.utils;
+
+import java.awt.List;
+
+import cpw.mods.fml.common.registry.GameRegistry;
+import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.item.Item;
+
+public class UtilsItem extends Item {
+	
+	static List list = new List();
+	String Name;
+	
+	public UtilsItem(String modid, String name){
+		name = Name;
+		setUnlocalizedName(modid + "_" + name);
+		setCreativeTab(CreativeTabs.tabMisc);
+		setTextureName(modid + ":" + name);
+		list.add(name);
+	}
+
+	public UtilsItem() {
+		// TODO Auto-generated constructor stub
+	}
+	
+	public static void register() {
+		
+		int x = -1;
+		UtilsItem item = new UtilsItem();
+		while(x < list.getItemCount()){
+		GameRegistry.registerItem(item, list.getItem(x));
+		x++;
+		}
+
+}
+}

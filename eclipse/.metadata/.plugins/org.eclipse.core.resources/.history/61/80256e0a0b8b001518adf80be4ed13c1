@@ -1,0 +1,14 @@
+package com.ashindigo.alloycraft.tileentites;
+
+import net.minecraft.inventory.ISidedInventory;
+import net.minecraft.tileentity.TileEntity;
+
+public class ForgeTileEntity extends TileEntity implements ISidedInventory {
+	
+	@Override
+	public String getInventoryName() {
+		return "Alloy Furnace";
+	}
+
+
+}

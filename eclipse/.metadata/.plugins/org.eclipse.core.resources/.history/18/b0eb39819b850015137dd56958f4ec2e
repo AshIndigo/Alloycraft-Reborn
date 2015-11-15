@@ -1,0 +1,37 @@
+package com.ashindigo.alloycraft;
+
+import com.ashindigo.utils.UtilsItem;
+import com.ashindigo.utils.UtilsItemBlockLoader;
+
+public class AlloycraftItems extends UtilsItemBlockLoader {
+	
+	public static UtilsItem test;
+	static UtilsItem item = new UtilsItem();
+	public static UtilsItem test2;
+	public static UtilsItem test3;
+	public static void preInitItems() {
+		
+		test = new UtilsItem(AlloycraftMain.modid, "testitemwow");
+		test2 = new UtilsItem(AlloycraftMain.modid, "testitemopp");
+		test3 = new UtilsItem(AlloycraftMain.modid, "testitemoppp");
+		UtilsItem goldironhelmet = new UtilsArmor(); //0 for helmet
+		UtilsItem goldironchestplate = new UtilsArmor(); // 1 for chestplate
+    	//GameRegistry.registerItem(AlloycraftItems.goldironleggings = new ItemGoldIronArmor("GoldIronLeggings", ARMORGOLDIRON, "GoldIron", 2), "GoldIronLeggings"); // 2 for leggings
+    	//GameRegistry.registerItem(AlloycraftItems.goldironboots = new ItemGoldIronArmor("GoldIronBoots", ARMORGOLDIRON, "GoldIron", 3), "GoldIronBoots"); // 3 for boots
+		item.itemlists.add(test);
+		item.itemlists.add(test2);
+		item.itemlists.add(test3);
+		
+	}
+
+	public static void initItems() {
+		// TODO Auto-generated method stub
+		
+	}
+	
+	public static void postInitItems() {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

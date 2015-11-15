@@ -1,0 +1,65 @@
+package com.ashindigo.utils;
+
+import java.util.ArrayList;
+import java.util.Random;
+
+import cpw.mods.fml.common.registry.GameRegistry;
+import net.minecraft.block.Block;
+import net.minecraft.block.material.Material;
+import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.init.Items;
+import net.minecraft.item.Item;
+import net.minecraft.item.ItemStack;
+import net.minecraft.world.World;
+import net.minecraft.world.chunk.IChunkProvider;
+/**
+ * Sub-Class dedicated to adding ores with automatic smelting recipes added.
+ * @author 19jasonides_a
+ */
+public class UtilsBlockOre extends UtilsBlock{
+
+	public static Item Ingot;
+	public static ArrayList orelist = new ArrayList();
+	public static ArrayList ingotlist = new ArrayList();
+	public int Dim;
+
+	/**
+	 * 
+	 * @param mat The material just use Material.rock
+	 * @param ingot The resulting item from the ore (Item)
+	 * @param ore The ore block that will be smelted (Block)
+	 * @param dim The dimension number 1: Overworld 2: Nether 3: End
+	 */
+	public UtilsBlockOre(Material mat, Item ingot, Block ore, int dim) {
+		super(mat);
+		ingotlist.add(ingot);
+		orelist.add(ore);
+		Dim = dim;
+    }
+	}
+	/**
+	 * Default constructor used to declare varibles
+	 * @param mat Just use Material.rock
+	 */
+	public UtilsBlockOre(Material mat) {
+		super(mat);
+	}
+	
+	public void generate(Random random, int chunkX, int chunkZ, World world, IChunkProvider chunkGenerator, IChunkProvider chunkProvider) {
+        switch (Dim) {
+            case 1: GenerateOverworld(random, chunkX * 16, chunkZ * 16, world); break;
+            case 2: GenerateEnd(random, chunkX * 16, chunkZ * 16, world); break;
+            case 3: GenerateNether(random, chunkX * 16, chunkZ * 16, world); break;
+        }
+	/**
+	 * Method to add smelting recipes to ores
+	 */
+	public static void registerRecipes(){
+		int oreruntime = 0;
+		while(oreruntime < orelist.size()){
+		GameRegistry.addSmelting((Block) orelist.get(oreruntime), new ItemStack ((Item) ingotlist.get(oreruntime), 1), 5);
+		oreruntime++;
+	}
+	}
+}
+

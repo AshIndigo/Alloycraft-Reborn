@@ -1,0 +1,26 @@
+package com.ashindigo.lejostest;
+
+import lejos.hardware.BrickFinder;
+import lejos.hardware.motor.EV3LargeRegulatedMotor;
+import lejos.hardware.motor.Motor;
+import lejos.hardware.port.AnalogPort;
+import lejos.hardware.port.MotorPort;
+import lejos.hardware.port.Port;
+import lejos.hardware.sensor.EV3TouchSensor;
+import lejos.hardware.sensor.NXTTouchSensor;
+import lejos.hardware.sensor.SensorMode;
+import lejos.remote.ev3.RemoteEV3;
+import lejos.robotics.RegulatedMotor;
+
+public class Main {
+
+	public static void main(String[] args) {
+		Motor.A.rotate(55);
+		BrickFinder.getDefault().getPort("1");
+		EV3TouchSensor touch = new EV3TouchSensor(BrickFinder.getDefault().getPort("1"));
+		if(touch.getCurrentMode() == 1){
+			
+		}
+	}
+
+}

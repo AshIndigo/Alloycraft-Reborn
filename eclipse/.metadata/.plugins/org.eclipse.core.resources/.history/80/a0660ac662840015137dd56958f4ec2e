@@ -1,0 +1,25 @@
+package com.ashindigo.alloycraft;
+
+import com.ashindigo.utils.UtilsBlock;
+import com.ashindigo.utils.UtilsItemBlockLoader;
+
+public class AlloycraftBlocks extends UtilsItemBlockLoader {
+	
+	public static UtilsBlock test;
+	
+	public static void preInitBlocks() {
+		
+		test = new UtilsBlock(null);
+		
+	}
+
+	public static void initBlocks() {
+		
+		
+	}
+	
+	public static void postInitBlocks() {
+		
+	}
+
+}

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Move element &apos;UtilsBlockContainer.java&apos; to &apos;Minecraft/src/main/java/com.ashindigo.utils&apos;&#x0A;- Original project: &apos;Minecraft&apos;&#x0A;- Destination element: &apos;Minecraft/src/main/java/com.ashindigo.utils&apos;&#x0A;- Original element: &apos;com.ashindigo.alloycraft.blocks.UtilsBlockContainer.java&apos;&#x0A;- Update references to refactored element" description="Move compilation unit" destination="/src\/main\/java&lt;com.ashindigo.utils" element1="/src\/main\/java&lt;com.ashindigo.alloycraft.blocks{UtilsBlockContainer.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.move" patterns="*" policy="org.eclipse.jdt.ui.moveResources" qualified="false" references="true" stamp="1447552178852" units="1" version="1.0"/>
+</session>

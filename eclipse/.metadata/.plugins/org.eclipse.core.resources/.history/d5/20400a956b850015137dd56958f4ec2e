@@ -1,0 +1,48 @@
+package com.ashindigo.utils;
+
+import java.awt.List;
+import java.lang.reflect.Field;
+import java.util.ArrayList;
+
+import com.ashindigo.alloycraft.AlloycraftItems;
+
+import cpw.mods.fml.common.event.FMLInitializationEvent;
+import cpw.mods.fml.common.registry.GameRegistry;
+import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.item.Item;
+
+/**
+* An Item class which automatically registers the item that is being added.
+* @author Ash Indigo
+*/
+public class UtilsItem extends Item {
+	
+	static ArrayList listitem = new ArrayList();
+	static int runtime = 0;
+	public static ArrayList itemlists = new ArrayList();
+	
+	public UtilsItem(String modid, String name){
+		setUnlocalizedName(modid + "_" + name);
+		setCreativeTab(CreativeTabs.tabMisc);
+		setTextureName(modid + ":" + name);
+		listitem.add(name);
+	}
+
+	public UtilsItem() {
+		// TODO Auto-generated constructor stub
+	}
+	
+	/**
+	 * Method that starts the automatic registration of items
+	 * Call in your initilation event
+	 * @link {UtilsMain.init}
+	 */
+	public static void register() {
+		
+		while(runtime < listitem.size()){
+		GameRegistry.registerItem((Item) itemlists.get(runtime), ("indigoapi" + runtime));
+		runtime++;
+		}
+
+}
+}

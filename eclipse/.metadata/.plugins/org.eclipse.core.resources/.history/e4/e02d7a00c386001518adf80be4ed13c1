@@ -1,0 +1,32 @@
+package com.ashindigo.utils;
+
+/**
+* TODO
+* @author Ash Indigo
+*/
+public class UtilsItemBlockLoader {
+	
+	public static void preInitItems() {
+	}
+		
+	public static void initItems() {
+		/**
+		 * Load the automatic item and block registers
+		 */
+		UtilsItem.register();
+		UtilsBlock.register();
+	}
+	
+	public static void postInitItems() {
+	}
+	
+	public static void preInitBlocks() {
+	}
+		
+	public static void initBlocks() {
+	}
+	
+	public static void postInitBlocks() {
+	}
+
+}

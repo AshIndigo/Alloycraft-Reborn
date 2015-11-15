@@ -1,0 +1,46 @@
+package com.ashindigo.alloycraft;
+
+import com.ashindigo.utils.UtilsArmor;
+import com.ashindigo.utils.UtilsItem;
+import com.ashindigo.utils.UtilsItemBlockLoader;
+
+import net.minecraft.item.Item;
+import net.minecraft.item.ItemArmor.ArmorMaterial;
+import net.minecraftforge.common.util.EnumHelper;
+
+public class AlloycraftItems extends UtilsItemBlockLoader {
+	
+	public static UtilsItem test;
+	static UtilsItem item = new UtilsItem();
+	public static UtilsItem test2;
+	public static UtilsItem test3;
+	public static ArmorMaterial ARMORGOLDIRON = EnumHelper.addArmorMaterial("GoldIron", 14, new int[] {2, 6, 4, 2}, 30);
+	//static UtilsArmor itemarmor = new UtilsArmor("test", ARMORGOLDIRON, 0, "ignore");
+	private static UtilsItem.UtilsArmor goldironchestplate;
+	private static UtilsItem.UtilsArmor goldironhelmet;
+	public static void preInitItems() {
+		
+		test = new UtilsItem(AlloycraftMain.modid, "testitemwow");
+		test2 = new UtilsItem(AlloycraftMain.modid, "testitemopp");
+		test3 = new UtilsItem(AlloycraftMain.modid, "testitemoppp");
+		goldironhelmet = new UtilsItem.UtilsArmor("armor", ARMORGOLDIRON, 0, AlloycraftMain.modid);
+		goldironchestplate = new UtilsItem.UtilsArmor("wowarmor", ARMORGOLDIRON, 1, AlloycraftMain.modid); 
+		item.itemlists.add(test);
+		item.itemlists.add(test2);
+		item.itemlists.add(test3);
+		item.itemlists.add(goldironhelmet);
+		item.itemlists.add(goldironchestplate);
+		
+	}
+
+	public static void initItems() {
+		// TODO Auto-generated method stub
+		
+	}
+	
+	public static void postInitItems() {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

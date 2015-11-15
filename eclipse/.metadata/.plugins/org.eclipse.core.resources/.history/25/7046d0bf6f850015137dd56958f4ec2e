@@ -1,0 +1,33 @@
+package com.ashindigo.utils;
+
+import cpw.mods.fml.common.Mod;
+import cpw.mods.fml.common.Mod.EventHandler;
+import cpw.mods.fml.common.event.FMLInitializationEvent;
+import cpw.mods.fml.common.event.FMLPostInitializationEvent;
+import cpw.mods.fml.common.event.FMLPreInitializationEvent;
+
+@Mod(modid = "IndigoUtils", version = "1.0", name = "Alloycraft")
+public class UtilsMod implements UtilsMain{
+
+	@Override
+	@EventHandler
+	public void preinit(FMLPreInitializationEvent event) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	@EventHandler
+	public void init(FMLInitializationEvent event) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	@EventHandler
+	public void postinit(FMLPostInitializationEvent event) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

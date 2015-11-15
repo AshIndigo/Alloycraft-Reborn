@@ -1,0 +1,7 @@
+package com.ashindigo.alloycraft;
+
+import com.ashindigo.utils.UtilsItem;
+
+public class AlloyItem extends UtilsItem {
+
+}

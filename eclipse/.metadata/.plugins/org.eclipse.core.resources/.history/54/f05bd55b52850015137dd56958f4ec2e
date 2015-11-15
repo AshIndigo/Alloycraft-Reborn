@@ -1,0 +1,30 @@
+package com.ashindigo.alloycraft;
+
+import com.ashindigo.utils.UtilsItem;
+import com.ashindigo.utils.UtilsItemBlockLoader;
+
+public class AlloycraftItems extends UtilsItemBlockLoader {
+	
+	public static UtilsItem test;
+
+	public static UtilsItem test2;
+	public static void preInitItems() {
+		
+		test = new UtilsItem(AlloycraftMain.modid, "testitem");
+		test2 = new UtilsItem(AlloycraftMain.modid, "testitem2");
+		UtilsItem item = new UtilsItem();
+		item.itemlists.add(test);
+		
+	}
+
+	public static void initItems() {
+		// TODO Auto-generated method stub
+		
+	}
+	
+	public static void postInitItems() {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

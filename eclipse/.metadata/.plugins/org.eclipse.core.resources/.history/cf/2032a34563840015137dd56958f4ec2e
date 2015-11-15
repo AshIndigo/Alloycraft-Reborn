@@ -1,0 +1,16 @@
+package com.ashindigo.utils;
+
+import net.minecraft.block.Block;
+import net.minecraft.block.material.Material;
+
+public class UtilsBlock extends Block {
+
+	public UtilsBlock(Material mat, String modid) {
+			super(mat);
+			setBlockName(modid + "_" + "BlockCookie");
+			setCreativeTab(CreativeTabs.tabBlock);
+			setBlockTextureName(Refrences.MODID + ":" + "BlockCookie");
+		}
+	}
+
+}

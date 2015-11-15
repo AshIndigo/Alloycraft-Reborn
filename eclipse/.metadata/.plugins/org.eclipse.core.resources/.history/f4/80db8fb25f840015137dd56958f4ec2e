@@ -1,0 +1,8 @@
+package com.ashindigo.utils;
+
+public interface UtilsItemsLoader {
+	
+	public void preInitItems();
+		
+
+}

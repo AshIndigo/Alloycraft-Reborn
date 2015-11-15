@@ -1,0 +1,41 @@
+package com.ashindigo.utils;
+
+import java.awt.List;
+
+import cpw.mods.fml.common.Mod.EventHandler;
+import cpw.mods.fml.common.event.FMLInitializationEvent;
+import cpw.mods.fml.common.registry.GameRegistry;
+import net.minecraft.block.Block;
+import net.minecraft.block.material.Material;
+import net.minecraft.creativetab.CreativeTabs;
+
+public class UtilsBlock extends Block {
+
+	//private static String Name;
+	static List list = new List();
+	private static Material mater = Material.rock;
+	
+	public UtilsBlock(Material mat, String modid, String name) {
+			super(mat);
+			setBlockName(modid + "_" + name);
+			setCreativeTab(CreativeTabs.tabBlock);
+			setBlockTextureName(modid + ":" + name);
+			list.add(name);
+			//mat = mater;
+		}
+	
+	public UtilsBlock(Material mat) {
+		super(mat);
+		// TODO Auto-generated constructor stub
+	}
+
+	public static void register() {
+		
+		int x = 0;
+		UtilsBlock block = new UtilsBlock(mater);
+		while(x < list.getItemCount()){
+		GameRegistry.registerBlock(block, list.getItem(x));
+		x = x + 1;
+		}
+	}
+	}

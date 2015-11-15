@@ -1,0 +1,25 @@
+package com.ashindigo.alloycraft;
+
+import com.ashindigo.utils.UtilsItemsLoader;
+
+public class AlloycraftItems implements UtilsItemsLoader {
+
+	@Override
+	public static void preInitItems() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void initItems() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void postInitItems() {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

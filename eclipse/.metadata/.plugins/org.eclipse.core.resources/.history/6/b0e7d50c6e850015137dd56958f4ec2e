@@ -1,0 +1,42 @@
+package com.ashindigo.utils;
+
+import java.awt.List;
+import java.util.ArrayList;
+
+import cpw.mods.fml.common.Mod.EventHandler;
+import cpw.mods.fml.common.event.FMLInitializationEvent;
+import cpw.mods.fml.common.registry.GameRegistry;
+import net.minecraft.block.Block;
+import net.minecraft.block.material.Material;
+import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.item.Item;
+
+public class UtilsBlock extends Block {
+	
+	private static Material material = Material.rock;
+	static ArrayList listblock = new ArrayList();
+	static int runtime = 0;
+	public static ArrayList blocklists = new ArrayList();
+	
+	public UtilsBlock(Material mat, String modid, String name) {
+			super(mat);
+			setBlockName(modid + "_" + name);
+			setCreativeTab(CreativeTabs.tabBlock);
+			setBlockTextureName(modid + ":" + name);
+			listblock.add(name);
+		}
+	
+	public UtilsBlock(Material mat) {
+		super(mat);
+		// TODO Auto-generated constructor stub
+	}
+
+	public static void register() {
+		
+		UtilsBlock block = new UtilsBlock(material);
+		while(runtime < listblock.size()){
+			GameRegistry.registerBlock((Block) blocklists.get(runtime), ("indigoapiblock" + runtime));
+			runtime++;
+		}
+	}
+	}

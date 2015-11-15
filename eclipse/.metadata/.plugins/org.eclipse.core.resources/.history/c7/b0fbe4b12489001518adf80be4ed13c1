@@ -1,0 +1,30 @@
+package com.ashindigo.alloycraft;
+
+import com.ashindigo.utils.UtilsItem;
+
+import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.entity.Entity;
+import net.minecraft.item.ItemStack;
+import net.minecraft.nbt.NBTTagCompound;
+import net.minecraft.world.World;
+
+public class AlloyItem extends UtilsItem {
+	
+	public AlloyItem(String modid, String name){
+		setUnlocalizedName(modid + "_" + name);
+		setCreativeTab(CreativeTabs.tabMisc);
+		setTextureName(modid + ":" + name);
+		UtilsItem.listitem.add(name);
+		UtilsItem.MODID = modid;
+		UtilsItem.itemlists.add(this);
+}
+	
+	@Override
+	public void onUpdate(ItemStack itemstack, World world, Entity entity, int metadata, boolean bool)
+	{
+	        if (itemstack.getTagCompound() == null)
+	        {
+	            AlloyItem itemStack.getTagCompound() = new NBTTagCompound(); //or itemstack.setTagCompound(new NBTTagCompound());
+	        }
+	}
+}

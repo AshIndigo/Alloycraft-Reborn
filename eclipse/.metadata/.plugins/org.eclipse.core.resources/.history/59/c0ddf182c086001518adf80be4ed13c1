@@ -1,0 +1,11 @@
+package com.ashindigo.utils;
+
+import net.minecraft.item.*;
+
+public class UtilsToolset {
+	
+	public class UtilsPickaxe extends ItemPickaxe{
+		
+	}
+	
+}

@@ -1,0 +1,10 @@
+package com.ashindigo.utils;
+
+import com.ashindigo.alloycraft.AlloycraftMain;
+
+import cpw.mods.fml.common.Mod;
+
+@Mod(modid = "IndigoUtils", version = "1.0", name = "Alloycraft")
+public class UtilsMod implements UtilsMain{
+
+}

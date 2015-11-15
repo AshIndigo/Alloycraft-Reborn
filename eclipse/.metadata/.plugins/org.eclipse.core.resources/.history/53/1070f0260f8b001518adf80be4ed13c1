@@ -1,0 +1,27 @@
+package com.ashindigo.alloycraft.blocks;
+
+import com.ashindigo.alloycraft.tileentites.ForgeTileEntity;
+import com.ashindigo.utils.UtilsBlock;
+
+import net.minecraft.block.material.Material;
+import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.tileentity.TileEntity;
+import net.minecraft.world.World;
+
+public class ForgeBlock extends UtilsBlockContainer {
+
+	public ForgeBlock(Material mat, String modid, String name, TileEntity tilentity) {
+		super(mat, modid, name, tilentity);
+		setBlockName(modid + "_" + name);
+		setCreativeTab(CreativeTabs.tabBlock);
+		setBlockTextureName(modid + ":" + name);
+		this.tileEntity = tilentity;
+	}
+	
+	@Override
+	public TileEntity createNewTileEntity(World p_149915_1_, int p_149915_2_) {
+		// TODO Auto-generated method stub
+		return new ForgeTileEntity(4, "Cool Thing");
+	}
+
+}

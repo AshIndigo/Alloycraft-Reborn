@@ -1,0 +1,41 @@
+package com.ashindigo.utils;
+
+import java.awt.List;
+import java.lang.reflect.Field;
+import java.util.ArrayList;
+
+import com.ashindigo.alloycraft.AlloycraftItems;
+
+import cpw.mods.fml.common.registry.GameRegistry;
+import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.item.Item;
+
+public class UtilsItem extends Item {
+	
+	static ArrayList listitem = new ArrayList();
+	static int runtime = 0;
+	public static ArrayList itemlists = new ArrayList();
+	
+	public UtilsItem(String modid, String name){
+		setUnlocalizedName(modid + "_" + name);
+		setCreativeTab(CreativeTabs.tabMisc);
+		setTextureName(modid + ":" + name);
+		listitem.add(name);
+	}
+
+	public UtilsItem() {
+		// TODO Auto-generated constructor stub
+	}
+	
+	public static void register() {
+		
+		UtilsItem item = new UtilsItem();
+		while(runtime < listitem.size()){
+		GameRegistry.registerItem((Item) itemlists.get(runtime), ("indigoapi" + runtime));
+		runtime++;
+		System.out.println("Test");
+		System.out.println(runtime);
+		}
+
+}
+}

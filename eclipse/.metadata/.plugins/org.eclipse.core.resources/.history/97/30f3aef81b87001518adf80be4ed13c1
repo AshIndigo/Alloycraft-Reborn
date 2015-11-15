@@ -1,0 +1,55 @@
+package com.ashindigo.alloycraft;
+
+import java.lang.reflect.Array;
+import java.util.ArrayList;
+
+import com.ashindigo.utils.UtilsArmor;
+import com.ashindigo.utils.UtilsItem;
+import com.ashindigo.utils.UtilsItemBlockLoader;
+import com.ashindigo.utils.UtilsToolset;
+
+import net.minecraft.item.Item;
+import net.minecraft.item.Item.ToolMaterial;
+import net.minecraft.item.ItemArmor.ArmorMaterial;
+import net.minecraftforge.common.util.EnumHelper;
+
+public class AlloycraftItems extends UtilsItemBlockLoader {
+	
+	public static UtilsItem test;
+	public static UtilsToolset.UtilsAxe axetest;
+	public static UtilsToolset.UtilsSword swordtest;
+	static UtilsItem item = new UtilsItem();
+	static UtilsToolset tools = new UtilsToolset();
+	public static ToolMaterial Testmat = EnumHelper.addToolMaterial("Testmat", 2, 400, 5.5F, 2.5F, 30);
+	public static ArmorMaterial ARMORGOLDIRON = EnumHelper.addArmorMaterial("GoldIron", 14, new int[] {2, 6, 4, 2}, 30);
+	public static UtilsArmor goldironhelmet;
+	public static UtilsArmor goldironchestplate;
+	static UtilsArmor armor = new UtilsArmor(ARMORGOLDIRON, 0, 0);
+	
+	public static void preInitItems() {
+		
+		test = new UtilsItem(AlloycraftMain.modid, "testitem");
+		goldironhelmet = new UtilsArmor("armor", ARMORGOLDIRON, 0, AlloycraftMain.modid, test);
+		item.itemlists.add(test);
+		armor.itemlists.add(goldironhelmet);
+		goldironchestplate = new UtilsArmor("armorchest", ARMORGOLDIRON, 2, AlloycraftMain.modid, test);
+		armor.itemlists.add(goldironchestplate);
+		axetest = new UtilsToolset.UtilsAxe(Testmat, "axetest", AlloycraftMain.modid, test);
+		swordtest = new UtilsToolset.UtilsSword(Testmat, "swordtest", AlloycraftMain.modid, test);
+		tools.toollists.add(axetest);
+		tools.toollists.add(swordtest);
+		UtilsArmor.armorlist.add(goldironhelmet);
+		UtilsArmor.armorlist.add(goldironchestplate);
+	}
+
+	public static void initItems() {
+		// TODO Auto-generated method stub
+		
+	}
+	
+	public static void postInitItems() {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

@@ -1,0 +1,16 @@
+[
+{
+  "modid": "rustmod",
+  "name": "The Rust Mod",
+  "description": "A mod that implements rust into Minecraft",
+  "version": "1.0",
+  "mcversion": "${mcversion}",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["AshIndigo"],
+  "credits": "Wuppy29 for his awesome tutorials and the forge guys for making forge.",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]

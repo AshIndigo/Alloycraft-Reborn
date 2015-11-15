@@ -1,0 +1,84 @@
+package com.ashindigo.utils;
+
+import java.util.ArrayList;
+
+import cpw.mods.fml.common.registry.GameRegistry;
+import net.minecraft.item.Item;
+import net.minecraft.item.ItemAxe;
+import net.minecraft.item.ItemHoe;
+import net.minecraft.item.ItemPickaxe;
+import net.minecraft.item.ItemSpade;
+import net.minecraft.item.ItemSword;
+
+public class UtilsToolset {
+	
+	static ArrayList listtools = new ArrayList();
+	static int runtime = 0;
+	static String MODID;
+	public static String textureName;
+	public static ArrayList toollists = new ArrayList();
+	
+	public UtilsToolset() {
+		// TODO Auto-generated constructor stub
+	}
+	
+	public class UtilsPickaxe extends ItemPickaxe{
+
+		protected UtilsPickaxe(ToolMaterial p_i45347_1_) {
+			super(p_i45347_1_);
+			// TODO Auto-generated constructor stub
+		}
+		
+	}
+	
+	public class UtilsAxe extends ItemAxe{
+
+		protected UtilsAxe(ToolMaterial p_i45327_1_) {
+			super(p_i45327_1_);
+			// TODO Auto-generated constructor stub
+		}
+		
+	}
+	
+	public class UtilsSword extends ItemSword{
+
+		public UtilsSword(ToolMaterial p_i45356_1_) {
+			super(p_i45356_1_);
+			// TODO Auto-generated constructor stub
+		}
+		
+	}
+	
+	public class UtilsHoe extends ItemHoe{
+
+		public UtilsHoe(ToolMaterial p_i45343_1_) {
+			super(p_i45343_1_);
+			// TODO Auto-generated constructor stub
+		}
+		
+	}
+	
+	public class UtilsShovel extends ItemSpade{
+
+		public UtilsShovel(ToolMaterial p_i45353_1_) {
+			super(p_i45353_1_);
+			// TODO Auto-generated constructor stub
+		}
+		
+	}
+	
+	/**
+	 * Method that starts the automatic registration of items and armor.
+	 * Call in init method
+	 * See:{@link UtilsMain.init}
+	 */
+	public static void register() {
+		
+		while(runtime < listtools.size()){
+		GameRegistry.registerItem((Item) toollists.get(runtime), ("indigoapi" + runtime));
+		runtime++;
+		
+	
+}
+	}
+}

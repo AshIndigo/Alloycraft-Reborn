@@ -1,0 +1,7 @@
+package com.ashindigo.alloycraft.blocks;
+
+import com.ashindigo.utils.UtilsBlock;
+
+public class ForgeBlock extends UtilsBlock {
+
+}

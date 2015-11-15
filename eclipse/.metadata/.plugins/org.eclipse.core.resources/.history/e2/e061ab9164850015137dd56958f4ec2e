@@ -1,0 +1,34 @@
+package com.ashindigo.utils;
+
+import com.ashindigo.RustMod.RustModItems;
+import com.ashindigo.RustMod.lib.Strings;
+
+import cpw.mods.fml.common.FMLCommonHandler;
+import cpw.mods.fml.common.Mod.EventHandler;
+import cpw.mods.fml.common.event.FMLInitializationEvent;
+import cpw.mods.fml.common.event.FMLPostInitializationEvent;
+import cpw.mods.fml.common.event.FMLPreInitializationEvent;
+import cpw.mods.fml.common.registry.GameRegistry;
+import net.minecraft.init.Items;
+import net.minecraft.item.ItemStack;
+import net.minecraftforge.common.MinecraftForge;
+import net.minecraftforge.common.config.Configuration;
+
+public interface UtilsMain {
+	
+	 /**
+	   * Creates a new Student with the given name.
+	   * The name should include both first and
+	   * last name.
+	   */
+	@EventHandler
+	public void preinit(FMLPreInitializationEvent event);
+	
+	@EventHandler
+	public void init(FMLInitializationEvent event);
+	
+	@EventHandler
+	public void postinit(FMLPostInitializationEvent event);
+
+
+}

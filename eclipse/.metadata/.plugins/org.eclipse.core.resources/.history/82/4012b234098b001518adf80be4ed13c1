@@ -1,0 +1,23 @@
+package com.ashindigo.alloycraft.blocks;
+
+import com.ashindigo.utils.UtilsBlock;
+
+import net.minecraft.block.material.Material;
+import net.minecraft.creativetab.CreativeTabs;
+
+public class ForgeBlock extends UtilsBlock {
+
+	public ForgeBlock(Material mat, String modid, String name) {
+		super(mat, modid, name);
+		setBlockName(modid + "_" + name);
+		setCreativeTab(CreativeTabs.tabBlock);
+		setBlockTextureName(modid + ":" + name);
+		listblock.add(name);
+		blocklists.add(this);
+	}
+	@Override
+	public void onRightClick(){
+		
+	}
+
+}
