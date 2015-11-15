@@ -10,18 +10,15 @@ import net.minecraft.tileentity.TileEntity;
 import net.minecraft.world.World;
 
 public class UtilsTileEntity extends TileEntity implements ISidedInventory {
-	
-	private int Slots;
 
-	public UtilsTileEntity(int slots){
-		Slots = slots;
+	public UtilsTileEntity(){
+		
 	}
 
 	@Override
 	public int getSizeInventory() {
 		// TODO Auto-generated method stub
-		UtilsContainer container = new UtilsContainer();
-		return Slots;
+		return 40;
 	}
 
 	@Override

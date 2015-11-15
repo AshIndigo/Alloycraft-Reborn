@@ -20,7 +20,7 @@ public class GuiHandler implements IGuiHandler {
 			switch(ID) {
 			case AlloycraftMain.guiIDForge:
 				if (entity instanceof ForgeTileEntity) {
-					return new UtilsContainer(player.inventory, (ForgeTileEntity) entity);
+					return new ForgeContainer(player.inventory);
 				}
 				return null;		
 		
@@ -38,10 +38,10 @@ public class GuiHandler implements IGuiHandler {
 			switch(ID) {
 			case AlloycraftMain.guiIDForge:
 				if (entity instanceof ForgeTileEntity) {
-					return new UtilsGui(new ForgeContainer(player.inventory, new ForgeTileEntity(40)), "wow", AlloycraftMain.modid, 176, 166, (ForgeTileEntity) entity, player.inventory, "Cool beans");
+					return new ForgeGui(new ForgeContainer(player.inventory), "wow", AlloycraftMain.modid, 176, 166, player.inventory, "Cool beans");
 				}
 				
-				return null;
+				return new ForgeGui(new ForgeContainer(player.inventory), "wow", AlloycraftMain.modid, 176, 166, player.inventory, "Cool beans");
 			}
 		}
 		

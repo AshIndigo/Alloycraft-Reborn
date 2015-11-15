@@ -15,11 +15,10 @@ public class UtilsGui extends GuiContainer {
 	private Container Container;
 	private String FileName;
 	private String Modid;
-	UtilsTileEntity tileentity;
 	public ResourceLocation texture = new ResourceLocation(Modid + ":" + "textures/gui/" + FileName + ".png");
 	public static String Name;
 	
-	public UtilsGui(Container container, String filename, String modid, int x, int y, TileEntity tileentity, InventoryPlayer invplayer, String name) {
+	public UtilsGui(Container container, String filename, String modid, int x, int y, InventoryPlayer invplayer, String name) {
 		super(container);
 		Container = container;
 		FileName = filename;
