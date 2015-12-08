@@ -1,7 +1,0 @@
-package com.ashindigo.alloycraft;
-
-import com.ashindigo.utils.UtilsItemsLoader;
-
-public class AlloycraftItems implements UtilsItemsLoader {
-
-}

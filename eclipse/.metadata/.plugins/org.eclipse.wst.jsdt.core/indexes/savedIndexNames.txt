@@ -1,0 +1,6 @@
+INDEX VERSION 1.3+/Users/19jasonides_a/Documents/Programming/forge-1.7.10-10.13.4.1492-1.7.10-src/eclipse/.metadata/.plugins/org.eclipse.wst.jsdt.core/indexes
+4287103709.index
+3393815472.index
+3237480567.index
+3124602704.index
+3790555479.index

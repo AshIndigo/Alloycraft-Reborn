@@ -47,7 +47,9 @@ public class AlloycraftMain implements UtilsMain {
 			AlloycraftItems.initItems();
 			GameRegistry.addRecipe(new RecipeHandler());
 	    	NetworkRegistry.INSTANCE.registerGuiHandler(instance, new GuiHandler());
-			GameRegistry.registerTileEntity(ForgeTileEntity.class, "forgetileentity");
+			GameRegistry.registerTileEntity(ForgeTileEntity.class, "forgefurnace2");
+			GameRegistry.registerBlock(AlloycraftBlocks.forgeoff, "cool");
+			GameRegistry.registerBlock(AlloycraftBlocks.forgeon, "cool2");
 		}
 
 		@Override

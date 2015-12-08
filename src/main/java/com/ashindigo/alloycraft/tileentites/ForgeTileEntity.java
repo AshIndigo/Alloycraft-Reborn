@@ -1,26 +1,20 @@
 package com.ashindigo.alloycraft.tileentites;
 
 import com.ashindigo.alloycraft.blocks.ForgeBlock;
-import com.ashindigo.alloycraft.lib.ForgeContainer;
 import com.ashindigo.alloycraft.lib.ForgeRecipes;
-import com.ashindigo.utils.UtilsTileEntity;
 
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
+import net.minecraft.inventory.ISidedInventory;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.nbt.NBTTagList;
+import net.minecraft.tileentity.TileEntity;
 
-public class ForgeTileEntity extends UtilsTileEntity {
+public class ForgeTileEntity extends TileEntity implements ISidedInventory {
 
-	public ForgeTileEntity() {
-		super();
-		// TODO Auto-generated constructor stub
-		slots = new ItemStack[4];
-	}
-	
 	private ItemStack slots[];
 	
 	public int dualPower;
@@ -34,9 +28,13 @@ public class ForgeTileEntity extends UtilsTileEntity {
 	
 	private String customName;
 	
+	public ForgeTileEntity() {
+		slots = new ItemStack[4];
+	}
+
 	@Override
 	public int getSizeInventory() {
-		return 40;
+		return slots.length;
 	}
 
 	@Override
@@ -299,6 +297,5 @@ public class ForgeTileEntity extends UtilsTileEntity {
 			this.markDirty();
 		}
     }
-	
 	
 }

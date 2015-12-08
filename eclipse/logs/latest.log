@@ -1,90 +1,39 @@
-[22:45:06] [main/INFO]: Setting user: Player781
-[22:45:10] [Client thread/INFO]: LWJGL Version: 2.9.1
-[22:45:25] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Not Enough Items, FMLFileResourcePack:The Rust Mod, FMLFileResourcePack:Alloycraft, FMLFileResourcePack:GlueMod, FMLFileResourcePack:IndigoUtils, FMLFileResourcePack:CoFH Core, FMLFileResourcePack:Not Enough Resources, FMLFileResourcePack:Thermal Dynamics, FMLFileResourcePack:Thermal Expansion, FMLFileResourcePack:Thermal Foundation
-[22:45:30] [Sound Library Loader/INFO]: Sound engine started
-[22:45:33] [Client thread/INFO]: Created: 16x16 textures/blocks-atlas
-[22:45:33] [Client thread/INFO]: Created: 16x16 textures/items-atlas
-[22:45:37] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Not Enough Items, FMLFileResourcePack:The Rust Mod, FMLFileResourcePack:Alloycraft, FMLFileResourcePack:GlueMod, FMLFileResourcePack:IndigoUtils, FMLFileResourcePack:CoFH Core, FMLFileResourcePack:Not Enough Resources, FMLFileResourcePack:Thermal Dynamics, FMLFileResourcePack:Thermal Expansion, FMLFileResourcePack:Thermal Foundation
-[22:45:38] [Client thread/INFO]: Created: 512x512 textures/blocks-atlas
-[22:45:40] [Client thread/INFO]: Created: 512x512 textures/items-atlas
-[22:45:41] [Sound Library Loader/INFO]: Sound engine started
-[22:46:04] [Server thread/INFO]: Starting integrated minecraft server version 1.7.10
-[22:46:04] [Server thread/INFO]: Generating keypair
-[22:46:05] [Server thread/INFO]: Preparing start region for level 0
-[22:46:07] [Server thread/INFO]: Preparing spawn area: 0%
-[22:46:08] [Server thread/INFO]: Changing view distance to 12, from 10
-[22:46:09] [Server thread/INFO]: Player781[local:E:c8d6398c] logged in with entity id 148 at (229.7065380045708, 4.0, -207.12512641261725)
-[22:46:09] [Server thread/INFO]: Player781 joined the game
-[22:46:12] [Server thread/WARN]: Can't keep up! Did the system time change, or is the server overloaded? Running 2876ms behind, skipping 57 tick(s)
-[22:46:17] [Server thread/INFO]: Saving and pausing game...
-[22:46:17] [Server thread/INFO]: Saving chunks for level 'New World'/Overworld
-[22:46:17] [Server thread/INFO]: Saving chunks for level 'New World'/Nether
-[22:46:17] [Server thread/INFO]: Saving chunks for level 'New World'/The End
-[22:46:48] [Server thread/ERROR]: Encountered an unexpected exception
-net.minecraft.util.ReportedException: Ticking memory connection
-	at net.minecraft.network.NetworkSystem.networkTick(NetworkSystem.java:198) ~[NetworkSystem.class:?]
-	at net.minecraft.server.MinecraftServer.updateTimeLightAndEntities(MinecraftServer.java:726) ~[MinecraftServer.class:?]
-	at net.minecraft.server.MinecraftServer.tick(MinecraftServer.java:614) ~[MinecraftServer.class:?]
-	at net.minecraft.server.integrated.IntegratedServer.tick(IntegratedServer.java:118) ~[IntegratedServer.class:?]
-	at net.minecraft.server.MinecraftServer.run(MinecraftServer.java:485) [MinecraftServer.class:?]
-	at net.minecraft.server.MinecraftServer$2.run(MinecraftServer.java:752) [MinecraftServer$2.class:?]
-Caused by: java.lang.NullPointerException
-	at net.minecraft.inventory.Slot.getStack(Slot.java:88) ~[Slot.class:?]
-	at net.minecraft.inventory.Container.getInventory(Container.java:67) ~[Container.class:?]
-	at net.minecraft.inventory.Container.addCraftingToCrafters(Container.java:53) ~[Container.class:?]
-	at cpw.mods.fml.common.network.internal.FMLNetworkHandler.openGui(FMLNetworkHandler.java:88) ~[FMLNetworkHandler.class:?]
-	at com.ashindigo.alloycraft.blocks.ForgeBlock.onBlockActivated(ForgeBlock.java:50) ~[ForgeBlock.class:?]
-	at net.minecraft.server.management.ItemInWorldManager.activateBlockOrUseItem(ItemInWorldManager.java:409) ~[ItemInWorldManager.class:?]
-	at net.minecraft.network.NetHandlerPlayServer.processPlayerBlockPlacement(NetHandlerPlayServer.java:593) ~[NetHandlerPlayServer.class:?]
-	at net.minecraft.network.play.client.C08PacketPlayerBlockPlacement.processPacket(C08PacketPlayerBlockPlacement.java:74) ~[C08PacketPlayerBlockPlacement.class:?]
-	at net.minecraft.network.play.client.C08PacketPlayerBlockPlacement.processPacket(C08PacketPlayerBlockPlacement.java:122) ~[C08PacketPlayerBlockPlacement.class:?]
-	at net.minecraft.network.NetworkManager.processReceivedPackets(NetworkManager.java:241) ~[NetworkManager.class:?]
-	at net.minecraft.network.NetworkSystem.networkTick(NetworkSystem.java:182) ~[NetworkSystem.class:?]
-	... 5 more
-[22:46:48] [Server thread/ERROR]: This crash report has been saved to: /Users/19jasonides_a/Documents/Programming/forge-1.7.10-10.13.4.1492-1.7.10-src/eclipse/./crash-reports/crash-2015-11-15_22.46.48-server.txt
-[22:46:48] [Server thread/INFO]: Stopping server
-[22:46:48] [Server thread/INFO]: Saving players
-[22:46:48] [Server thread/INFO]: Saving worlds
-[22:46:48] [Server thread/INFO]: Saving chunks for level 'New World'/Overworld
-[22:46:48] [Server thread/INFO]: Saving chunks for level 'New World'/Nether
-[22:46:48] [Server thread/INFO]: Saving chunks for level 'New World'/The End
-[22:46:48] [Client thread/WARN]: Failed to load texture: null:textures/gui/null.png
-java.io.FileNotFoundException: null:textures/gui/null.png
-	at net.minecraft.client.resources.SimpleReloadableResourceManager.getResource(SimpleReloadableResourceManager.java:71) ~[SimpleReloadableResourceManager.class:?]
-	at net.minecraft.client.renderer.texture.SimpleTexture.loadTexture(SimpleTexture.java:35) ~[SimpleTexture.class:?]
-	at net.minecraft.client.renderer.texture.TextureManager.loadTexture(TextureManager.java:89) [TextureManager.class:?]
-	at net.minecraft.client.renderer.texture.TextureManager.bindTexture(TextureManager.java:45) [TextureManager.class:?]
-	at com.ashindigo.alloycraft.lib.ForgeGui.drawGuiContainerBackgroundLayer(ForgeGui.java:48) [ForgeGui.class:?]
-	at net.minecraft.client.gui.inventory.GuiContainer.drawScreen(GuiContainer.java:93) [GuiContainer.class:?]
-	at net.minecraft.client.renderer.EntityRenderer.updateCameraAndRender(EntityRenderer.java:1137) [EntityRenderer.class:?]
-	at net.minecraft.client.Minecraft.runGameLoop(Minecraft.java:1067) [Minecraft.class:?]
-	at net.minecraft.client.Minecraft.run(Minecraft.java:962) [Minecraft.class:?]
-	at net.minecraft.client.main.Main.main(Main.java:164) [Main.class:?]
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_60]
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_60]
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_60]
-	at java.lang.reflect.Method.invoke(Method.java:497) ~[?:1.8.0_60]
-	at net.minecraft.launchwrapper.Launch.launch(Launch.java:135) [launchwrapper-1.12.jar:?]
-	at net.minecraft.launchwrapper.Launch.main(Launch.java:28) [launchwrapper-1.12.jar:?]
-	at net.minecraftforge.gradle.GradleStartCommon.launch(Unknown Source) [start/:?]
-	at GradleStart.main(Unknown Source) [start/:?]
-[22:46:52] [Client thread/FATAL]: Reported exception thrown!
-net.minecraft.util.ReportedException: Rendering screen
-	at net.minecraft.client.renderer.EntityRenderer.updateCameraAndRender(EntityRenderer.java:1168) ~[EntityRenderer.class:?]
-	at net.minecraft.client.Minecraft.runGameLoop(Minecraft.java:1067) ~[Minecraft.class:?]
-	at net.minecraft.client.Minecraft.run(Minecraft.java:962) [Minecraft.class:?]
-	at net.minecraft.client.main.Main.main(Main.java:164) [Main.class:?]
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_60]
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_60]
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_60]
-	at java.lang.reflect.Method.invoke(Method.java:497) ~[?:1.8.0_60]
-	at net.minecraft.launchwrapper.Launch.launch(Launch.java:135) [launchwrapper-1.12.jar:?]
-	at net.minecraft.launchwrapper.Launch.main(Launch.java:28) [launchwrapper-1.12.jar:?]
-	at net.minecraftforge.gradle.GradleStartCommon.launch(Unknown Source) [start/:?]
-	at GradleStart.main(Unknown Source) [start/:?]
-Caused by: java.lang.NullPointerException
-	at net.minecraft.inventory.Slot.getStack(Slot.java:88) ~[Slot.class:?]
-	at net.minecraft.client.gui.inventory.GuiContainer.func_146977_a(GuiContainer.java:219) ~[GuiContainer.class:?]
-	at net.minecraft.client.gui.inventory.GuiContainer.drawScreen(GuiContainer.java:114) ~[GuiContainer.class:?]
-	at net.minecraft.client.renderer.EntityRenderer.updateCameraAndRender(EntityRenderer.java:1137) ~[EntityRenderer.class:?]
-	... 11 more
+[13:34:57] [main/INFO]: Setting user: Player368
+[13:35:00] [Client thread/INFO]: LWJGL Version: 2.9.1
+[13:35:13] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Not Enough Items, FMLFileResourcePack:The Rust Mod, FMLFileResourcePack:Alloycraft, FMLFileResourcePack:GlueMod, FMLFileResourcePack:IndigoUtils, FMLFileResourcePack:CoFH Core, FMLFileResourcePack:Not Enough Resources, FMLFileResourcePack:Thermal Dynamics, FMLFileResourcePack:Thermal Expansion, FMLFileResourcePack:Thermal Foundation
+[13:35:17] [Sound Library Loader/INFO]: Sound engine started
+[13:35:18] [Client thread/INFO]: Created: 16x16 textures/blocks-atlas
+[13:35:18] [Client thread/INFO]: Created: 16x16 textures/items-atlas
+[13:35:22] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Not Enough Items, FMLFileResourcePack:The Rust Mod, FMLFileResourcePack:Alloycraft, FMLFileResourcePack:GlueMod, FMLFileResourcePack:IndigoUtils, FMLFileResourcePack:CoFH Core, FMLFileResourcePack:Not Enough Resources, FMLFileResourcePack:Thermal Dynamics, FMLFileResourcePack:Thermal Expansion, FMLFileResourcePack:Thermal Foundation
+[13:35:24] [Client thread/INFO]: Created: 512x512 textures/blocks-atlas
+[13:35:24] [Client thread/INFO]: Created: 512x512 textures/items-atlas
+[13:35:25] [Sound Library Loader/INFO]: Sound engine started
+[13:35:31] [Server thread/INFO]: Starting integrated minecraft server version 1.7.10
+[13:35:31] [Server thread/INFO]: Generating keypair
+[13:35:31] [Server thread/INFO]: Preparing start region for level 0
+[13:35:33] [Server thread/INFO]: Changing view distance to 12, from 10
+[13:35:34] [Server thread/INFO]: Player368[local:E:f3fa8ed4] logged in with entity id 177 at (230.13128012514642, 4.0, -208.61454179530747)
+[13:35:34] [Server thread/INFO]: Player368 joined the game
+[13:36:04] [Server thread/INFO]: Player368 has just earned the achievement [Taking Inventory]
+[13:36:04] [Client thread/INFO]: [CHAT] Player368 has just earned the achievement [Taking Inventory]
+[13:36:21] [Server thread/INFO]: Saving and pausing game...
+[13:36:21] [Server thread/INFO]: Saving chunks for level 'New World'/Overworld
+[13:36:21] [Server thread/INFO]: Saving chunks for level 'New World'/Nether
+[13:36:21] [Server thread/INFO]: Saving chunks for level 'New World'/The End
+[13:36:41] [Server thread/INFO]: Player368 tried to swim in lava
+[13:36:41] [Client thread/INFO]: [CHAT] Player368 tried to swim in lava
+[13:36:51] [Server thread/INFO]: Player368 tried to swim in lava
+[13:36:51] [Client thread/INFO]: [CHAT] Player368 tried to swim in lava
+[13:37:13] [Server thread/INFO]: Player368 tried to swim in lava
+[13:37:13] [Client thread/INFO]: [CHAT] Player368 tried to swim in lava
+[13:37:17] [Server thread/INFO]: Saving and pausing game...
+[13:37:17] [Server thread/INFO]: Saving chunks for level 'New World'/Overworld
+[13:37:17] [Server thread/INFO]: Saving chunks for level 'New World'/Nether
+[13:37:17] [Server thread/INFO]: Saving chunks for level 'New World'/The End
+[13:37:18] [Server thread/INFO]: Stopping server
+[13:37:18] [Server thread/INFO]: Saving players
+[13:37:18] [Server thread/INFO]: Saving worlds
+[13:37:18] [Server thread/INFO]: Saving chunks for level 'New World'/Overworld
+[13:37:18] [Server thread/INFO]: Saving chunks for level 'New World'/Nether
+[13:37:18] [Server thread/INFO]: Saving chunks for level 'New World'/The End
+[13:37:21] [Client thread/INFO]: Stopping!

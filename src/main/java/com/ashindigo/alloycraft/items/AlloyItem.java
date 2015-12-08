@@ -19,13 +19,17 @@ import net.minecraft.world.World;
 public class AlloyItem extends UtilsItem {
 	
 	public ItemStack itemStack;
+	ItemStack itemstack;
+	World world;
+	EntityPlayer player;
+	List list;
 	
 	public AlloyItem(String modid, String name){
 		setUnlocalizedName(modid + "_" + name);
 		setCreativeTab(CreativeTabs.tabMisc);
 		setTextureName(modid + ":" + name);
 		UtilsItem.listitem.add(name);
-		maxStackSize = 32;
+		maxStackSize = 1;
 		UtilsItem.MODID = modid;
 		UtilsItem.itemlists.add(this);
 }
@@ -39,8 +43,7 @@ public class AlloyItem extends UtilsItem {
 	            itemstack.getTagCompound().setInteger("Durability", 0);
 	            itemstack.getTagCompound().setInteger("Enchantability", 0);
 	            itemstack.getTagCompound().setInteger("???", 0);
-	            itemStack = itemstack;
-	            
+	            itemStack = itemstack;   
 	        }
 	        
 	}
@@ -57,6 +60,7 @@ public class AlloyItem extends UtilsItem {
 	            itemStack = itemstack;
 	            
 	        }
+	        System.out.println(itemStack.getTagCompound().getInteger("???"));
 	}
 	        
 	}

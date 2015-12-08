@@ -1,0 +1,26 @@
+package com.ashindigo.alloycraft.alloyfurnace;
+
+import net.minecraft.init.Blocks;
+import net.minecraft.init.Items;
+import net.minecraft.item.Item;
+import net.minecraft.item.ItemStack;
+
+public class AlloyFurnaceRecipes {
+
+	public AlloyFurnaceRecipes() {
+		
+	}
+	
+	public static ItemStack getSmeltingResult(Item item, Item item2) {
+		return getOutput(item, item2);
+	}
+	
+	public static ItemStack getOutput(Item item, Item item2) {
+		//Yes?
+		if (item == Items.iron_ingot && item2 == Items.gold_ingot || item == Items.iron_ingot && item2 == Items.gold_ingot) {
+			return new ItemStack(Items.iron_ingot, 2);
+		}
+		return null;
+	}
+	
+}

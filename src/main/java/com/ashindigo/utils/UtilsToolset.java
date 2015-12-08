@@ -23,17 +23,17 @@ import net.minecraft.util.ReportedException;
  */
 public class UtilsToolset {
 	
-	static ArrayList listtools = new ArrayList();
-	static int runtime = 0;
-	static String MODID;
+	public static ArrayList listtools = new ArrayList();
+	public static int runtime = 0;
+	public static String MODID;
 	public static String textureName;
 	public static ArrayList toollists = new ArrayList();
-	static Item Material;
-	static Item pickaxe;
-	static Item axe;
-	static Item sword;
-	static Item hoe;
-	static Item shovel;
+	public static Item Material;
+	public static Item pickaxe;
+	public static Item axe;
+	public static Item sword;
+	public static Item hoe;
+	public static Item shovel;
 
 	public UtilsToolset() {
 		// TODO Auto-generated constructor stub

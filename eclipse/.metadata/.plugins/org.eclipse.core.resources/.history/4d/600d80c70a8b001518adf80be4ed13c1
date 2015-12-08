@@ -1,7 +1,0 @@
-package com.ashindigo.utils;
-
-import net.minecraft.inventory.Slot;
-
-public class Slotforge extends Slot {
-
-}

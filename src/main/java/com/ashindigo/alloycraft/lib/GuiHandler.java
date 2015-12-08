@@ -2,9 +2,6 @@ package com.ashindigo.alloycraft.lib;
 
 import com.ashindigo.alloycraft.AlloycraftMain;
 import com.ashindigo.alloycraft.tileentites.ForgeTileEntity;
-import com.ashindigo.utils.UtilsContainer;
-import com.ashindigo.utils.UtilsGui;
-
 import cpw.mods.fml.common.network.IGuiHandler;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.tileentity.TileEntity;
@@ -20,7 +17,7 @@ public class GuiHandler implements IGuiHandler {
 			switch(ID) {
 			case AlloycraftMain.guiIDForge:
 				if (entity instanceof ForgeTileEntity) {
-					return new ForgeContainer(player.inventory);
+					return new ForgeContainer(player.inventory, (ForgeTileEntity) entity);
 				}
 				return null;		
 		
@@ -38,10 +35,9 @@ public class GuiHandler implements IGuiHandler {
 			switch(ID) {
 			case AlloycraftMain.guiIDForge:
 				if (entity instanceof ForgeTileEntity) {
-					return new ForgeGui(new ForgeContainer(player.inventory), "wow", AlloycraftMain.modid, 176, 166, player.inventory, "Cool beans");
+					return new ForgeGui(player.inventory, (ForgeTileEntity) entity);
 				}
-				
-				return new ForgeGui(new ForgeContainer(player.inventory), "wow", AlloycraftMain.modid, 176, 166, player.inventory, "Cool beans");
+				return null;
 			}
 		}
 		

@@ -1,7 +1,0 @@
-package com.ashindigo.utils;
-
-import net.minecraft.block.Block;
-
-public class UtilsBlock extends Block {
-
-}

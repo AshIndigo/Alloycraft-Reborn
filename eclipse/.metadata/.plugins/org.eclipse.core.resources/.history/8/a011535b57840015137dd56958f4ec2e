@@ -1,9 +1,0 @@
-package com.ashindigo.utils;
-
-import com.ashindigo.RustMod.lib.Strings;
-
-public interface UtilsMain {
-	
-	@Mod(modid = Strings.modid, version = Strings.version, name = Strings.name, guiFactory = "com.ashindigo.RustMod.lib.GuiFactory");
-
-}

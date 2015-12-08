@@ -1,19 +1,19 @@
 package com.ashindigo.alloycraft;
 
 import com.ashindigo.alloycraft.blocks.ForgeBlock;
-import com.ashindigo.alloycraft.tileentites.ForgeTileEntity;
-import com.ashindigo.utils.*;
+import com.ashindigo.utils.UtilsItemBlockLoader;
 
-import net.minecraft.block.material.Material;
+import net.minecraft.block.Block;
 
 public class AlloycraftBlocks extends UtilsItemBlockLoader {
-	
-	public static UtilsBlockContainer forge;
-	static ForgeTileEntity teforge;
+
+	public static Block forgeoff;
+	public static Block forgeon;
 
 	public static void preInitBlocks() {
 		
-		forge = new ForgeBlock(Material.rock, AlloycraftMain.modid, "forgeblock", teforge, false);
+		forgeon = new ForgeBlock(true);
+		forgeoff = new ForgeBlock(false);
 	}
 
 	public static void initBlocks() {

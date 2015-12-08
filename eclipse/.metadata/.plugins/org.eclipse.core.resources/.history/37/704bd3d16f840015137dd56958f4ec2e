@@ -1,7 +1,0 @@
-package com.ashindigo.utils;
-
-import net.minecraft.item.Item;
-
-public class UtilsItem extends Item {
-
-}

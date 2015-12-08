@@ -2,30 +2,30 @@
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="" key="selection"/>
-		<item value="false" key="casesensitive"/>
+		<item value="numb1" key="selection"/>
+		<item value="true" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
+			<item value="numb1"/>
+			<item value="mainText"/>
+			<item value="maintext"/>
+			<item value="Equal"/>
+			<item value="Preferred"/>
+			<item value="alloy"/>
 			<item value="damage"/>
 			<item value="fuse"/>
-			<item value="f"/>
-			<item value="explo"/>
-			<item value="isremote"/>
-			<item value="worldobj"/>
-			<item value="="/>
-			<item value="event.player.inventory.currentItem"/>
 		</list>
 		<list key="replacehistory">
+			<item value=""/>
+			<item value="forge"/>
 			<item value="=="/>
 			<item value="0"/>
 			<item value="event.player.inventory.currentItem"/>
 			<item value="Strings"/>
 			<item value="RustMod"/>
 			<item value="event.player.getCurrentEquippedItem().getItem().setDamage(event.player.getCurrentEquippedItem(), event.player.getCurrentEquippedItem().getItemDamage() + 1);"/>
-			<item value="RustModItems.rustedtool"/>
-			<item value="rustmod"/>
 		</list>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">

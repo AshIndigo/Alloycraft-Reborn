@@ -28,7 +28,6 @@ public class UtilsItemBlockLoader {
 		 */
 		UtilsBlock.register();
 		UtilsBlockOre.generate();
-		UtilsBlockContainer.register();
 	}
 	
 	public static void postInitBlocks() {
