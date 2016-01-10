@@ -1,0 +1,12 @@
+package com.ashindigo.test;
+
+public class ConverterMain {
+	
+	Scanner scanner = new Scanner(System.in);
+
+	public static void main(String[] args) {
+		
+		run();
+
+	}
+}

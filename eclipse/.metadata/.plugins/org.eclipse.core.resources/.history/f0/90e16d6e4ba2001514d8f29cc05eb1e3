@@ -1,0 +1,99 @@
+package com.ashindigo.test;
+
+import java.util.Scanner;
+
+public class ConverterMain {
+	
+	static Scanner scanner = new Scanner(System.in);
+	static int mode1 = -1;
+	static int Int = -1;
+
+	public static void main(String[] args) {
+		
+		run();
+
+	}
+
+	public static void run() {
+		System.out.println("Hello and welcome to the Converter.");
+		System.out.println("What would you like to do today?");
+		mode1 = scanner.nextInt();
+		switch (mode1) {
+		case 0: Int(); break;
+		case 1: string(); break;
+		case 2: Double(); break;
+		case 3: Long(); break;
+		}
+		
+	}
+
+	private static void Long() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	private static void Double() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	private static void string() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	private static void Int() {
+		
+		System.out.println("Would you like to change from int to String or vice versa?");
+		System.out.println("Please enter an int");
+		Int = scanner.nextInt();
+		System.out.println("0 = int to String");
+		System.out.println("1 = String to int");
+		int mode = scanner.nextInt();
+		switch (mode) {
+		case 0: intToString();
+		case 1: stringToInt();
+		}
+		
+	}
+
+	private static void stringToDouble() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	private static void doubleToString() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	private static void stringToLong() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	private static void longToString() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	private static void stringToInteger() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	private static void integerToString() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	private static void stringToInt() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	private static void intToString() {
+		// TODO Auto-generated method stub
+		
+	}
+}

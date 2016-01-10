@@ -1,0 +1,7 @@
+package com.ashindigo.test;
+
+public class Woman {
+	
+	public Object woman = new Woman();
+
+}

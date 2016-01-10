@@ -1,0 +1,16 @@
+package com.ashindigo.test;
+
+public class InfoMain {
+
+	public static void main(String[] args) {
+		
+		run();
+
+	}
+
+	private static void run() {
+	
+		System.get
+	}
+
+}

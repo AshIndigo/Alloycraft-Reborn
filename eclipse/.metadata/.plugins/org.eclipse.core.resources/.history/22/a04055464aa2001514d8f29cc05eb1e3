@@ -1,0 +1,21 @@
+package com.ashindigo.test;
+
+import java.util.Scanner;
+
+public class ConverterMain {
+	
+	Scanner scanner = new Scanner(System.in);
+	static int mode = -1;
+
+	public static void main(String[] args) {
+		
+		run();
+
+	}
+
+	public static void run() {
+		System.out.println("Hello and welcome to the Converter.");
+		System.out.println("Please enter your selection");
+		
+	}
+}

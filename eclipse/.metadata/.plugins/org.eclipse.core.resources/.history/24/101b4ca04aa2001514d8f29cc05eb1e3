@@ -1,0 +1,32 @@
+package com.ashindigo.test;
+
+import java.util.Scanner;
+
+public class ConverterMain {
+	
+	static Scanner scanner = new Scanner(System.in);
+	static int mode = -1;
+
+	public static void main(String[] args) {
+		
+		run();
+
+	}
+
+	public static void run() {
+		System.out.println("Hello and welcome to the Converter.");
+		System.out.println("Please enter your selection");
+		mode = scanner.nextInt();
+		switch (mode) {
+		case 0: intToString();
+		case 1: stringToInt();
+		case 2: integerToString();
+		case 3: stringToInteger();
+		case 4: longToString();
+		case 5: stringToLong();
+		case 5: doubleToString();
+		case 5: stringToDouble();
+		}
+		
+	}
+}

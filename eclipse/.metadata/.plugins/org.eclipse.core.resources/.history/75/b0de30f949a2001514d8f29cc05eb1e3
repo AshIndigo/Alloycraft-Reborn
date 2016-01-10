@@ -1,0 +1,14 @@
+package com.ashindigo.test;
+
+import java.util.Scanner;
+
+public class ConverterMain {
+	
+	Scanner scanner = new Scanner(System.in);
+
+	public static void main(String[] args) {
+		
+		run();
+
+	}
+}
